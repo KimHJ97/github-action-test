@@ -43,8 +43,8 @@ jobs:
         run: |
           echo $JOB_ENV
           echo $STEP_ENV
-          echo ${{ variables.MESSAGE }}
-          echo $MESSAGE
+          echo ${{ env.MESSAGE }}
+          echo $${{ github.repository.MESSAGE }}
 
       - name: Print Repository Secrets
         run: |
