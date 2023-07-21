@@ -38,4 +38,5 @@ jobs:
       - name: Print Message
         run: |
           echo ${{ secrets.MESSAGE }}
+          echo "The value of MY_SECRET_VARIABLE is ${{ secrets.MY_SECRET_VARIABLE }}"
           echo Finished!!
