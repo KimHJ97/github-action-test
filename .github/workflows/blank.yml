@@ -37,5 +37,5 @@ jobs:
       
       - name: Print Message
         run: |
-          echo ${{ MESSAGE }}
+          echo ${{ secrets.MESSAGE }}
           echo Finished!!
