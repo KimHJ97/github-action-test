@@ -17,6 +17,8 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    env:
+      JOB_ENV: job!
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -36,8 +38,12 @@ jobs:
           echo test, and deploy your project.
       
       - name: Print Repository Variable
+        env:
+          STEP_ENV: step!
         run: |
-          echo ${{ secrets.MESSAGE }}
+          echo $JOB_ENV
+          echo $STEP_ENV
+          echo ${{ variables.MESSAGE }}
           echo $MESSAGE
 
       - name: Print Repository Secrets
