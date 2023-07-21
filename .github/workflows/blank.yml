@@ -44,7 +44,9 @@ jobs:
           echo $JOB_ENV
           echo $STEP_ENV
           echo ${{ env.MESSAGE }}
-          echo $${{ github.repository.MESSAGE }}
+          echo ${{ github.repository.MESSAGE }}
+          echo ${{ vars.MESSAGE }}
+          echo ${{ secrets.MESSAGE }}
 
       - name: Print Repository Secrets
         run: |
