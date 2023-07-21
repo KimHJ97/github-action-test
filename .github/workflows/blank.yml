@@ -35,10 +35,12 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       
-      - name: Print Message
+      - name: Print Repository Variable
         run: |
           echo ${{ secrets.MESSAGE }}
-          echo "The value of MY_SECRET_VARIABLE is ${{ secrets.MESSAGE }}"
+          echo $MESSAGE
+
+      - name: Print Repository Secrets
+        run: |
           echo ${{ secrets.SECRET_VARIABLE }}
           echo "The value of MY_SECRET_VARIABLE is ${{ secrets.SECRET_VARIABLE }}"
-          echo Finished!!
